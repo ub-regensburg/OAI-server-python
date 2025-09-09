@@ -1,0 +1,173 @@
+{
+  "DublinCoreMetadata": {
+    "type": "object",
+    "properties": {
+      "xmlns:oai_dc": {
+        "type": "string",
+        "enum": ["http://www.openarchives.org/OAI/2.0/oai_dc/"],
+        "xml": {
+          "attribute": true
+        }
+      },
+      "xmlns:dc": {
+        "type": "string",
+        "enum": ["http://purl.org/dc/elements/1.1/"],
+        "xml": {
+          "attribute": true
+        }
+      },
+      "xmlns:xsi": {
+        "type": "string",
+        "enum": ["http://www.w3.org/2001/XMLSchema-instance"],
+        "xml": {
+          "attribute": true
+        }
+      },
+      "xsi:schemaLocation": {
+        "type": "string",
+        "enum": ["http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"],
+        "xml": {
+          "attribute": true
+        }
+      },
+      "title": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },              
+      "creator": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "subject": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "description": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "publisher": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "contributor": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "date": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "format": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "identifier": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "source": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "language": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "relation": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "coverage": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      },
+      "rights": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "xml": {
+          "prefix": "dc"
+        }
+      }
+    },
+    "xml": {
+      "name": "oaidc:dc"
+    }
+  }
+}

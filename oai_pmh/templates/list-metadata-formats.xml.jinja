@@ -1,0 +1,14 @@
+{% extends "oai-pmh.xml.jinja" %}
+{% block content %}
+    {% if oai_response | attr('list_metadata_formats') %}
+        <ListMetadataFormats>
+            {% for format in oai_response.list_metadata_formats.metadata_format %}
+                <metadataFormat>
+                    <metadataPrefix>{{format.metadata_prefix.value}}</metadataPrefix>
+                    <schema>{{format.var_schema}}</schema>
+                    <metadataNamespace>{{format.metadata_namespace}}</metadataNamespace>
+                </metadataFormat>
+            {% endfor %}
+        </ListMetadataFormats>
+    {% endif %}
+{% endblock %}

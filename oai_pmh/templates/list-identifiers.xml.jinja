@@ -1,0 +1,17 @@
+{% extends "oai-pmh.xml.jinja" %}
+{% block content %}
+    {% if oai_response | attr('list_identifiers') %}
+        <ListIdentifiers>
+            {% for header in oai_response.list_identifiers.header %}
+                {% include 'header.xml.jinja' %}
+            {% endfor %}
+            {% set token = oai_response.list_identifiers.resumption_token %}
+            {% if token is not none%}
+                <resumptionToken
+                    expirationDate="{{token.expiration_date}}" 
+                    completeListSize="{{token.complete_list_size}}" 
+                    cursor="{{token.cursor}}">{{token.content}}</resumptionToken>
+            {% endif %}
+        </ListIdentifiers>
+    {% endif %}
+{% endblock %}

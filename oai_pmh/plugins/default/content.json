@@ -1,0 +1,60 @@
+
+[
+    {
+        "identifier": "https://www.wikidata.org/wiki/Q43361",
+        "datestamp": "1997-06-30",
+        "metadata": {
+            "title": ["Harry Potter and the Philosopher's Stone"],
+            "creator": ["J.K. Rowling"],
+            "subject": ["magic", "wizard"],
+            "type": ["content"],
+            "identifier": ["https://www.wikidata.org/wiki/Q43361"]
+        }
+    },
+    {
+        "identifier": "https://www.wikidata.org/wiki/Q47209",
+        "datestamp": "1998-07-02",
+        "metadata": {
+            "title": ["Harry Potter and the Chamber of Secrets"],
+            "creator": ["J.K. Rowling"],
+            "subject": ["magic", "wizard"],
+            "type": ["content"],
+            "identifier": ["https://www.wikidata.org/wiki/Q47209"]
+        }
+    },
+    {
+        "identifier": "https://www.wikidata.org/wiki/Q47598",
+        "datestamp": "1999-07-08",
+        "metadata": {
+            "title": ["Harry Potter and the Prisoner of Azkaban"],
+            "creator": ["J.K. Rowling"],
+            "subject": ["magic", "wizard"],
+            "type": ["content"],
+            "identifier": ["https://www.wikidata.org/wiki/Q47598"]
+        }
+    },
+    {
+        "identifier": "soa_87-x",
+        "datestamp": "2021-03-15",
+        "metadata": {
+            "title": ["Historische Statistik Serbiens: Öffentliche Finanzen"],
+            "creator": ["http://d-nb.info/gnd/120956055"],
+            "subject": ["Geschichte Allgemein", "Sozialwissenschaften"],
+            "type": ["content"],
+            "coverage": ["POLYGON ((18.2871 46.6389, 23.4727 46.6389, 23.4727 42.2497, 18.2871 42.2497, 18.2871 46.6389))", "January 1, 1834 to December 31, 1914"],
+            "identifier": ["soa_87-x"]
+        }
+    },
+    {
+        "identifier": "soa_87-xiv",
+        "datestamp": "2021-03-15",
+        "metadata": {
+            "title": ["Historische Statistik Serbiens: Gesundheitswesen"],
+            "creator": ["http://d-nb.info/gnd/120956055"],
+            "subject": ["Geschichte Allgemein"],
+            "type": ["content"],
+            "coverage": ["POLYGON ((18.5837 46.4091, 23.6374 46.4091, 23.6374 42.0999, 18.5837 42.0999, 18.5837 46.4091))", "January 1, 1834 to December 31, 1914"],
+            "identifier": ["soa_87-xiv"]
+        }
+    }
+]

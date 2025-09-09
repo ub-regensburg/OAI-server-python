@@ -1,0 +1,9 @@
+{% extends "oai-pmh.xml.jinja" %}
+{% block content %}
+    {% if oai_response | attr('get_record') %}
+        <GetRecord>
+            {% set record = oai_response.get_record.record %}
+            {% include 'record.xml.jinja' %}
+        </GetRecord>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,29 @@
+
+[
+    {
+        "identifier": "https://www.wikidata.org/wiki/Q8337",
+        "datestamp": "2023-04-04",
+        "metadata": {
+            "title": ["Harry Potter"],
+            "creator": ["J.K. Rowling"],
+            "subject": ["magic", "wizard"],
+            "description": ["Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry."],
+            "type": ["parent"],
+            "identifier": ["https://www.wikidata.org/wiki/Q8337"],
+            "relation": ["https://www.wikidata.org/wiki/Q43361", "https://www.wikidata.org/wiki/Q47209", "https://www.wikidata.org/wiki/Q47598"]
+        }
+    },
+    {
+        "identifier": "soa_87",
+        "datestamp": "2021-03-15",
+        "metadata": {
+            "title": ["Holm Sundhaussen: Historische Statistik Serbiens 1834 -1914 mit europäischen Vergleichsdaten", "Holm Sundhaussen: Historical statistics of Serbia 1834 -1914 with European comparative data"],
+            "creator": ["http://d-nb.info/gnd/120956055"],
+            "subject": ["Wirtschaftsgeschichte", "Sozialwissenschaften"],
+            "type": ["parent"],
+            "coverage": ["POLYGON ((17.4243 46.1626, 23.7085 46.1626, 23.7085 42.2263, 17.4243 42.2263, 17.4243 46.1626))", "January 1, 1834 to December 31, 1914"],
+            "identifier": ["soa_87"],
+            "relation": ["soa_87-xiv", "soa_87-x"]
+        }
+    }
+]

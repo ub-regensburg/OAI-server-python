@@ -1,0 +1,7 @@
+    <header {% if header.status is not none %}status="{{header.status}}"{% endif %}>
+        <identifier>{{header.identifier}}</identifier>
+        <datestamp>{{header.datestamp.strftime('%Y-%m-%d')}}</datestamp>
+        {% for spec in (header.set_spec | default([], true)) %}
+            <setSpec>{{spec}}</setSpec>
+        {% endfor %}
+    </header>

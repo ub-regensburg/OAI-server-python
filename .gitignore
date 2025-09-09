@@ -1,0 +1,9 @@
+oai_pmh/generated_README.md
+oai_pmh/generated/models/*.py
+oai_pmh/.openapi-generator/
+
+openapitools.json
+
+**/**.pyc
+**/**/__pycache__/
+.venv/

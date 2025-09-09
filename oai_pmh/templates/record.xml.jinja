@@ -1,0 +1,15 @@
+<record>
+    {% set header = record.header %}
+    {% include 'header.xml.jinja' %}
+    {% if record.metadata is not none %}
+        <metadata>
+            {% if record.metadata.dublincore is not none %}
+                {% set dublincore = record.metadata.dublincore %}
+                {% include 'dublincore.xml.jinja' %}
+            {% endif %}
+        </metadata>
+    {% endif %}
+    {% if record.about is not none %}
+        <about>{{ record.about | safe }}</about>
+    {% endif %}
+</record>

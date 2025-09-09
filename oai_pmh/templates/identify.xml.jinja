@@ -1,0 +1,24 @@
+{% extends "oai-pmh.xml.jinja" %}
+{% block content %}
+    {% if oai_response | attr('identify') %}
+        <Identify>
+            <repositoryName>{{oai_response.identify.repository_name}}</repositoryName>
+            <baseURL>{{oai_response.identify.base_url}}</baseURL>
+            <protocolVersion>{{oai_response.identify.protocol_version}}</protocolVersion>
+            {% for email in oai_response.identify.admin_email %}
+                <adminEmail>{{email}}</adminEmail>
+            {% endfor %}
+            <earliestDatestamp>{{oai_response.identify.earliest_datestamp.strftime("%Y-%m-%d")}}</earliestDatestamp>
+            <deletedRecord>{{oai_response.identify.deleted_record}}</deletedRecord>
+            <granularity>{{oai_response.identify.granularity}}</granularity>
+            {% for compression in oai_response.identify.compression %}
+                <compression>{{compression}}</compression>
+            {% endfor %}
+            {% for description in oai_response.identify.description %}
+                <description>
+                    {{description | safe}}
+                </description>
+            {% endfor %}
+        </Identify>
+    {% endif %}
+{% endblock %}

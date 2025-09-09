@@ -1,0 +1,22 @@
+{% extends "oai-pmh.xml.jinja" %}
+{% block content %}
+    {% if oai_response | attr('list_sets') %}
+        <ListSets>
+            {% for set in oai_response.list_sets.set %}
+                  <set>
+                    <setSpec>{{set.set_spec}}</setSpec>
+                    <setName>{{set.set_name}}</setName>
+                    <setDescription>{{set.set_description | safe}}</setDescription>
+                </set>
+            {% endfor %}
+            {% set token = oai_response.list_sets.resumption_token %}
+            {% if token is not none%}
+                <resumptionToken
+                    expirationDate="{{token.expiration_date}}" 
+                    completeListSize="{{token.complete_list_size}}" 
+                    cursor="{{token.cursor}}">{{token.content}}</resumptionToken>
+            {% endif %}
+        </ListSets>
+    {% endif %}
+{% endblock %}
+flask --app oai_pmh run --host=0.0.0.0 --port=53000 --debug

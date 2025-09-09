@@ -1,0 +1,17 @@
+{% extends "oai-pmh.xml.jinja" %}
+{% block content %}
+    {% if oai_response | attr('list_records') %}
+        <ListRecords>
+            {% for record in oai_response.list_records.record %}
+                {% include 'record.xml.jinja' %}
+            {% endfor %}
+            {% set token = oai_response.list_records.resumption_token %}
+            {% if token is not none%}
+                <resumptionToken
+                    expirationDate="{{token.expiration_date}}" 
+                    completeListSize="{{token.complete_list_size}}" 
+                    cursor="{{token.cursor}}">{{token.content}}</resumptionToken>
+            {% endif %}
+        </ListRecords>
+    {% endif %}
+{% endblock %}

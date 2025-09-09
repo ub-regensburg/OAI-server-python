@@ -1,0 +1,51 @@
+<oai_dc:dc
+    xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    {% for title in (dublincore.title | default([], true)) %}
+        <dc:title><![CDATA[{{title | safe}}]]></dc:title>
+    {% endfor %}
+    {% for creator in (dublincore.creator | default([], true)) %}
+        <dc:creator><![CDATA[{{creator | safe}}]]></dc:creator>
+    {% endfor %}
+    {% for subject in (dublincore.subject | default([], true)) %}
+        <dc:subject><![CDATA[{{subject | safe}}]]></dc:subject>
+    {% endfor %}
+    {% for description in (dublincore.description | default([], true)) %}
+        <dc:description><![CDATA[{{description | safe}}]]></dc:description>
+    {% endfor %}
+    {% for date in (dublincore.var_date | default([], true)) %}
+        <dc:date>{{date | safe}}</dc:date>
+    {% endfor %}
+    {% for publisher in (dublincore.publisher | default([], true)) %}
+        <dc:publisher><![CDATA[{{publisher | safe}}]]></dc:publisher>
+    {% endfor %}
+    {% for contributor in (dublincore.contributor | default([], true)) %}
+        <dc:contributor><![CDATA[{{contributor | safe}}]]></dc:contributor>
+    {% endfor %}
+    {% for type in (dublincore.type | default([], true)) %}
+        <dc:type>{{type | safe}}</dc:type>
+    {% endfor %}
+    {% for format in (dublincore.format | default([], true)) %}
+        <dc:format>{{format | safe}}</dc:format>
+    {% endfor %}
+    {% for identifier in (dublincore.identifier | default([], true)) %}
+        <dc:identifier>{{identifier | safe}}</dc:identifier>
+    {% endfor %}
+    {% for source in (dublincore.source | default([], true)) %}
+        <dc:source>{{source | safe}}</dc:source>
+    {% endfor %}
+    {% for language in (dublincore.language | default([], true)) %}
+        <dc:language>{{language | safe}}</dc:language>
+    {% endfor %}
+    {% for relation in (dublincore.relation | default([], true)) %}
+        <dc:relation>{{relation | safe}}</dc:relation>
+    {% endfor %}
+    {% for coverage in (dublincore.coverage | default([], true)) %}
+        <dc:coverage><![CDATA[{coverage | safe}}]]></dc:coverage>
+    {% endfor %}
+    {% for rights in (dublincore.rights | default([], true)) %}
+        <dc:rights>{{rights | safe}}</dc:rights>
+    {% endfor %}
+</oai_dc:dc>

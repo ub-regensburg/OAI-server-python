@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>{{oai_response.response_date.strftime("%Y-%m-%dT%H:%M:%SZ")}}</responseDate>
+    {% if oai_response.error is not none and oai_response.error.code.value in ['badArgument', 'badVerb'] %}
+        <request>{{oai_response.request.additional_properties.get('content')}}</request>
+    {% else %}
+        {% set request = oai_response.request%}
+        <request
+            {% if request.verb is not none %}verb="{{request.verb.value}}"{% endif %}
+            {% if request.metadata_prefix is not none %}metadataPrefix="{{request.metadata_prefix.value}}"{% endif %}
+            {% if request.var_from is not none %}from="{{request.var_from}}"{% endif %}
+            {% if request.until is not none %}until="{{request.until}}"{% endif %}
+            {% if request.identifier is not none %}identifier="{{request.identifier}}"{% endif %}
+            {% if request.resumption_token is not none %}resumptionToken="{{request.resumption_token}}"{% endif %}
+            {% if request.set is not none %}set="{{request.set}}"{% endif %}
+        >
+            {{oai_response.request.additional_properties.get('content')}}
+        </request>
+    {% endif %}
+	{% block content %}
+	{% endblock %}
+    {% if oai_response.error is not none %}
+        <error code="{{oai_response.error.code.value}}">{{oai_response.error.additional_properties.get('content')}}</error>
+    {% endif %}
+</OAI-PMH>

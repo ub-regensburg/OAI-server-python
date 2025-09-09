@@ -1,0 +1,5 @@
+{
+    "disallowAdditionalPropertiesIfNotPresent": false,
+    "generateSourceCodeOnly": true,
+    "packageName": "oai_pmh.generated"
+}
